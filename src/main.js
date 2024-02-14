@@ -48,7 +48,8 @@ searchForm.addEventListener('submit', function (event) {
         galleryContainer.innerHTML = galleryHTML;
 
         // Виведення інформації про результат
-         resultInfo.innerHTML = `<p class="result-messages">${hits.length} images found for "${queryInput}"</p>`;
+        // resultInfo.innerHTML = `<p class="result-messages">${hits.length} images found for "${queryInput}"</p>`;
+        resultInfo.innerHTML = `<p class="result-messages">Loading images, please wait...</p>`;
 
         // Оновлення SimpleLightbox
         lightbox.refresh();
@@ -56,14 +57,15 @@ searchForm.addEventListener('submit', function (event) {
         // Закриття інформації про результат через 5 секунд
         setTimeout(() => {
           resultInfo.innerHTML = '';
-        }, 500);
+        }, 2000);
       } else {
         // Відображення повідомлення про відсутність результатів
-        resultInfo.innerHTML = '<p class="no-results-message">No images found.</p>';
+        // resultInfo.innerHTML = '<p class="no-results-message">No images found.</p>';
+         resultInfo.innerHTML = '<p class="no-results-message">No images found.</p>';
 
         setTimeout(() => {
           resultInfo.innerHTML = '';
-        }, 500);
+        }, 5000);
 
       }
     })

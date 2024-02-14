@@ -231,8 +231,10 @@ figure {
 }
 
 .result-messages {
-  background-color: #f8d7da;
-  color: #721c24;
+  /* background-color: #f8d7da; */
+ margin-left: 30%;
+ font-size: 26px;
+  /* color: #721c24;
   padding: 10px;
   border: 1px solid #050505;
   border-radius: 4px;
@@ -240,5 +242,5 @@ figure {
   width: 240px;
   position: absolute;
   top: 20px;
-  right: 50px;
+  right: 50px; */
 }
